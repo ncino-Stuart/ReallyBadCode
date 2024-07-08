@@ -33,10 +33,7 @@ public class App
         // I need to load the local webpage
 
         String path = "file:///Users/stuartgreenlief/src/interview/ReallyBadCode/my-app/src/main/www/MyData.html";
- //       String path2 = "https://www.google.com";
-        //String path2 = "https://www.google.com/";
         ChromeOptions options = new ChromeOptions();
-
         WebDriverManager.chromedriver().setup();
         options.addArguments("--ignore-certificate-errors");
         options.addArguments("--remote-allow-origins=*");
