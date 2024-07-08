@@ -14,6 +14,7 @@ package com.testing.myapp;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.nio.file.Path;
 import java.util.*;
 
 public class Main
@@ -22,6 +23,11 @@ public class Main
     // com.testing.myapp.Main method
 
     public static void main(String[] args) {
+        Path path = Path.of("testwebsite.html");
+
+        // load the page with a selenium webdriver
+        WebDriver driver = new ChromeDriver();
+
 
         String path = "data.csv";
         // 1. Read data from file
@@ -35,7 +41,9 @@ public class Main
         try {File file = new File(s);
             var scanner = new Scanner(file);
             String data = "";
-            data += scanner.nextLine() + "\n";
+            while (scanner.hasNextLine()) {
+                data += scanner.nextLine() + "\n";
+            }
             scanner.close();
             return data; } catch (Exception e) {
             System.out.println("An error occurred.");

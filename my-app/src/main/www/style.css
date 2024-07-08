@@ -1,0 +1,30 @@
+#container {
+    background-color: #EEEEEE;
+    padding: 20px;
+}
+
+.box {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#nice-box {
+    background-color: green;
+    height: 100px;
+    width: 300px;
+}
+
+#less-nice-box {
+    background-color: red;
+    height: 50px;
+    width: 500px;
+}
+
+#text-area-box {
+    background-color: #CCCCCC;
+}
+
+textarea {
+    width: 700px;
+    height: 100px;
+}
