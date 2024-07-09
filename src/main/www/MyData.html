@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Very cool foodtruck app</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function updateTextArea() {
+                setTimeout(function() {
+                    let textArea = document.querySelector("#text-area-box__textarea");
+                    textArea.value = "newemail@updated.com";
+                }, 1000); // 1-second delay (1000 milliseconds)
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Wow look at my cool Trucks!</h1>
+        <div id="container">
+            <div id="nice-box" class="box">
+                This is a very nice box, where I will put my trucks
+            </div>
+            <div id="less-nice-box" class="box">
+                This is a less nice box tbh, but it's still a box
+            </div>
+            <div id="text-area-box" class="box">
+                <p>This box has text from a foodtruck owner database in it</p>
+                <textarea id="text-area-box__textarea">thisemail@fake.com</textarea>
+                <button onclick="updateTextArea()">Get New foodtruck Text</button>
+        </div>
+        </div>
+    </body>
+</html>
